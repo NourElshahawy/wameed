@@ -29,32 +29,31 @@
             <div class="collapse navbar-collapse justify-content-center " id="main">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-4 active line" aria-current="page" href="#">Home</a>
+                        <a class="nav-link p-2 p-lg-4 active line" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-4" href="#">Scaner</a>
+                        <a class="nav-link p-2 p-lg-4" href="#scan">Scaner</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-4" href="#">Chats</a>
+                        <a class="nav-link p-2 p-lg-4" href="chats.html" >Chats</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-4" href="#">Profile</a>
+                        <a class="nav-link p-2 p-lg-4" href="profile.html">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-2 p-lg-4" href="#">About Us</a>
+                        <a class="nav-link p-2 p-lg-4" href="about-us.html" >About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link p-2 p-lg-4" href="#">Contact Us</a>
                     </li>
-                    </li>
                 </ul>
             </div>
             <div class="d-flex">
-                <button type="button" class="btn text-white hover-opacity ">
-                    Log in
+                <button type="button" class="btn text-white hover-opacity text">
+                    <a href="login.html" target="_blank" rel="" >Log in</a>
                   </button>
                 <button type="button" class="btn btn-1 ">
-                    Sign up
+                    <a href="continue.html" target="_blank" rel="">Sign up</a>
               </button>
             </div>
         </div>
@@ -86,7 +85,7 @@
     </div>
     <!-- header end -->
     <!-- scaner -->
-    <div class="scaner">
+    <div class="scaner" id="scan">
         <div class="container">
             <div class="row ">
                 <div class="col-lg-6 scaner-content">
@@ -98,7 +97,10 @@
                         detects person from his face expressions to
                         know if he has depression or not.</p>
                         <div class="text-center pb-5">
-                            <button class="btn">Get Started <img src="assets/imgs/secanr/Group.png"  class="img-fluid ps-2" alt=""></button>
+                    <a href="after-scan.html"  rel="noopener noreferrer">
+                        <button class="btn">Get Started <img src="assets/imgs/secanr/Group.png"  class="img-fluid ps-2" alt=""></button>
+
+                    </a>
                         </div>
                 </div>
                 <div class="col-lg-6 img-1">
@@ -164,7 +166,9 @@
                     <div class="section-content ">
                         <p class="p1">Dr. John Smith</p>
                         <p class="p2">Psychiatrist</p>
-                        <button class="btn btn-1">Book now</button>
+                        <a href="book-now.html" target="_blank" rel="noopener noreferrer">
+                            <button class="btn btn-1">Book now</button>
+                        </a>
                     </div>
                 </div>
                 <div class="rate d-flex pe-3">
@@ -183,7 +187,9 @@
                 <div class="section-content ">
                     <p class="p1">Dr. John Smith</p>
                     <p class="p2">Psychiatrist</p>
-                    <button class="btn btn-1">Book now</button>
+                    <a href="book-now.html" target="_blank" rel="noopener noreferrer">
+                        <button class="btn btn-1">Book now</button>
+                    </a>
                 </div>
             </div>
             <div class="rate d-flex pe-3">
@@ -194,533 +200,68 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="p2"> See_More</a>
+        <a href="doctors.html" target="_blank" class="p2"> See_More</a>
     </div>
 </div>
 <!-- section from doctors end -->
-<!-- register -->
-<div class="register ">
+<!-- footer -->
+<footer>
     <div class="container">
-        <div class="box text-center ">
-            <p>Continue As...</p>
-            <div class="rectangle ">
-                <div class="patient">
-                    <a href="#" class="img">
-                        <img src="assets/imgs/register/Vector.png" class="img-fluid" alt="">
-                        <p class="text-white ">Patient</p>
-                    </a>
-                </div> 
-            </div>
-            <div class="rectangle">
-                <div class="doctor">
-                    <a href="#" class="img">
-                        <img src="assets/imgs/register/Group.png" class="img-fluid" alt="">
-                        <p class="text-white ">Doctor</p>
-                    </a>
-                </div> 
-            </div>
-        </div>
-    </div>
-</div>
-<!-- register end -->
-<!-- login -->
-<div class="login">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <img src="assets/imgs/login/Group 854.png" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 col-md-12 text-center">
-                <p class="logo-text ">Wa<span class="M">M</span>ee<span class="d">d</span></p>
-                <form action="" class="pt-5" id="form">
-                      <div class="input-group">
-                        <input
-                          type="text"
-                          name="email"
-                          placeholder=" Enter your email"
-                          id="email"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                      </div>
-                      <div class="input-group">
-                        <input
-                          type="password"
-                          name="password"
-                          placeholder="Password"
-                          id="password"
-                          class=" mt-4"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                    </div>
-                    <div class="pt-2">
-                        <a href="#">Forget Password?</a>
-                    </div>
-                    <button type="submit" class="btn text-white mt-4">
-                        Log in
-                    </button>
-                  </form>
-                  <p class="pt-4 log">Or Log in with </p>
-                  <!-- <hr> -->
-                  <div class="d-flex justify-content-around imgs pt-3">
-                    <div class="facebook">
-                        <img src="assets/imgs/login/facebook (2) 1.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="facebook">
-                        <img src="assets/imgs/login/google 1.png" class="img-fluid" alt="">
-                    </div>
-                  </div>
-                  <div class="text-center pt-5">
-                    <p class="pt-5">Don’t have an account ? <span href="#" class="text-info">Sign Up</span></p>
-                    
-                  </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- login end -->
-<!-- sign up -->
-<div class="sign-up">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <img src="assets/imgs/sign up/Frame 865.png" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 col-md-12 text-center">
-                <h2>Registration</h2>
-                <p class="text-secondary">Create your account</p>
-                <form action="" class="pt-5" id="form">
-                    <div class="d-flex justify-content-between">
-                        <div class="input-group">
-                        <input
-                          type="text"
-                          name="username"
-                          placeholder=" Username"
-                          id="email"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                        <div class="input-group">
-                        <input
-                          type="text"
-                          name="email"
-                          placeholder=" Email"
-                          id="email"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="input-group">
-                            <input
-                              type="age"
-                              name="age"
-                              placeholder=" Age"
-                              id="age"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                        <div class="input-group">
-                            <input
-                              type="text"
-                              name="gender"
-                              placeholder=" Gender"
-                              id="gender"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="input-group">
-                            <input
-                              type="number"
-                              name="credit-number"
-                              placeholder=" Credit number"
-                              id="credit-number"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                        <div class="input-group">
-                            <input
-                              type="number"
-                              name="vodafone-cache"
-                              placeholder=" Vodafone cache"
-                              id="vodafone-cache"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    </div>
-                    <div class="input-group ">
-                        <input
-                          type="password"
-                          name="password"
-                          placeholder="Password"
-                          id="password"
-                          class=" mt-4 pass"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                    </div>
-                    <div class="input-group ">
-                        <input
-                            type="password"
-                            id="cpassword"
-                            name="cpassword"
-                            placeholder="Confirm Password"
-                            class=" mt-4 pass"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    <button type="submit" class="btn text-white mt-4">
-                        Sign Up
-                    </button>
-                  </form>
-                  <div class="text-center pt-5">
-                    <p class="pt-5">Already have an account ?   <span href="#" class="text-info">Log in</span></p>
-                    
-                  </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- sign up end -->
-<!-- sign up for doc -->
-<div class="sign-up">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <img src="assets/imgs/sign up/Frame 865.png" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 col-md-12 text-center">
-                <h2>Registration</h2>
-                <p class="text-secondary">Create your account</p>
-                <form action="" class="pt-5" id="form">
-                    <div class="d-flex justify-content-between">
-                        <div class="input-group">
-                        <input
-                          type="text"
-                          name="username"
-                          placeholder=" Username"
-                          id="email"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                        <div class="input-group">
-                        <input
-                          type="text"
-                          name="email"
-                          placeholder=" Email"
-                          id="email"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="input-group">
-                            <input
-                              type="age"
-                              name="age"
-                              placeholder=" Age"
-                              id="age"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                        <div class="input-group">
-                            <input
-                              type="text"
-                              name="gender"
-                              placeholder=" Gender"
-                              id="gender"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="input-group">
-                            <input
-                              type="number"
-                              name="national-id"
-                              placeholder=" National Id"
-                              id="national-id"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                        <div class="input-group">
-                            <input
-                              type="number"
-                              name="vodafone-cache"
-                              placeholder=" Vodafone cache"
-                              id="vodafone-cache"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="input-group">
-                            <input
-                              type="text"
-                              name="qualifications"
-                              placeholder=" Qualifications"
-                              id="qualifications"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                        <div class="input-group">
-                            <input
-                              type="number"
-                              name="experience-years"
-                              placeholder="experience years"
-                              id="experience-years"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="input-group">
-                            <input
-                              type="number"
-                              name="price-of-session"
-                              placeholder=" Price of session"
-                              id="price-of-session"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                        <div class="input-group">
-                            <input
-                              type="select"
-                              name="select-work-time"
-                              placeholder="select work time"
-                              id="select-work-time"
-                              class=" mt-4"
-                            />
-                            <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    </div>
-                    <div class="input-group ">
-                        <input
-                          type="password"
-                          name="password"
-                          placeholder="Password"
-                          id="password"
-                          class=" mt-4 pass"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                    </div>
-                    <div class="input-group ">
-                        <input
-                            type="password"
-                            id="cpassword"
-                            name="cpassword"
-                            placeholder="Confirm Password"
-                            class=" mt-4 pass"
-                        />
-                        <div class="error text-danger mt-4 ms-2"></div>
-                        </div>
-                    <button type="submit" class="btn text-white mt-4">
-                        Sign Up
-                    </button>
-                  </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- sign up end -->
-<!-- work time -->
-<div class="work-time">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <h2>Choose day/s work:</h2>
-                <div class="checkbox-group">
-                    <div class="flex-container">
-                        <input type="checkbox" id="day6" name="days" value="6">
-                    <label for="day6">Saturday</label>
-                    </div>
-                    <div class="flex-container">
-                        <input type="checkbox" id="day7" name="days" value="7">
-                    <label for="day7">Sunday</label>
-                    </div> 
-                    <div class="flex-container">
-                        <input type="checkbox" id="day1" name="days" value="1">
-                    <label for="day1">Monday</label>
-                    </div>
-                    <div class="flex-container">
-                        <input type="checkbox" id="day2" name="days" value="2">
-                        <label for="day2">Tuesday</label> 
-                    </div>
-                    <div class="flex-container">
-                        <input type="checkbox" id="day2" name="days" value="2">
-                    <label for="day2">Tuesday</label> 
-                    </div>
-                    <div class="flex-container">
-                        <input type="checkbox" id="day3" name="days" value="3">
-                    <label for="day3">Wednesday</label> 
-                    </div>
-                    <div class="flex-container">
-                        <input type="checkbox" id="day4" name="days" value="4">
-                    <label for="day4">Thursday</label>
-                    </div>
-                    <div class="flex-container">
-                        <input type="checkbox" id="day5" name="days" value="5">
-                    <label for="day5">Friday</label>
-                    </div>       
-                </div>
-                <div>
-                    <label for="time">Choose Time :</label>
-                    <select id="time" name="time">
-                        <option value="From - To">From - To</option>
-                        <option value="9:00 am - 2:00 pm">9:00 am - 2:00 pm</option>
-                        <option value="2:00 pm - 6:00 pm">2:00 pm - 6:00 pm</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <img src="assets/imgs/work-time/Group 922.png" class="img-fluid" alt="">
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-<!-- work time end -->
-
-<!-- reset pass -->
-<div class="reset-pass">
-<div class="container">
-    <div class="row ">
-        <div class="box col-lg-6 col-md-12">
-            <div class="img">
-                <img src="assets/imgs/reset-pass/Frame 859.png" class="img-fluid" alt="">
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-12 pt-5 text-center">
+        <div class="d-flex justify-content-around">
             <div class="text-center">
-                <p class="logo-text ">Wa<span class="M">M</span>ee<span class="d">d</span></p>
-            </div>
-            <div class="pass">
-                <p class="p-1">Forgot Password?</p>
-                <P class="p-2 ">Please enter your eamil address!</p>
-            </div>
-            <div class="input-group">
-                <input
-                  type="text"
-                  name="email"
-                  placeholder=" Enter your email"
-                  id="email"
-                />
-              </div>
-              <button type="submit" class="btn text-white mt-4">
-                Send Code
-            </button>
-        </div>
-    </div>
-</div>
-</div>
-<!-- reset pass end -->
-<!-- create-pass -->
-<div class="create-pass">
-    <div class="container">
-        <div class="row ">
-            <div class="box col-lg-6 col-md-12">
-                <div class="img">
-                    <img src="assets/imgs/create-pass/Frame 863.png" class="img-fluid" alt="">
+                <div class="img" href="#">
+                    <img src="assets/imgs/footer/Group.png" class="img-fluid" alt="">
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-12 pt-5 text-center">
-                <div class="text-center">
+                <div >
                     <p class="logo-text ">Wa<span class="M">M</span>ee<span class="d">d</span></p>
+                    <p class="p3">mental health care </p>
                 </div>
-                <div class="pass">
-                    <p class="p-1">Create Password?</p>
-                    <P class="p-2 ">Create your new password to log in !</p>
-                </div>
-                <div class="input-group ">
-                    <input
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                      id="password"
-                      class=" mt-4 pass"
-                    />
-                </div>
-                  <div class="input-group ">
-                    <input
-                        type="password"
-                        id="cpassword"
-                        name="cpassword"
-                        placeholder="Confirm Password"
-                        class=" mt-4 pass"
-                    />
-                    </div>
-                  <button type="submit" class="btn text-white mt-4">
-                    Set password
-                </button>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li id="p1"><a href="#">Menu</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Scanner</a></li>
+                    <li><a href="#">Chats</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li id="p1"><a href="#"> Contacts</a></li>
+                    <li><a href="#"><img src="assets/imgs/footer/Vector (2).png" alt="" class="p-1">+ 456 765 985</a></li>
+                    <li><a href="#"><img src="assets/imgs/footer/Vector (1).png" alt="" class="p-2">supports @ WaMeed . com</a></li>
+                    <li><a href="#"><img src="assets/imgs/footer/Vector.png" alt="" class="p-2"> WWW . WaMeed . com</a></li>
+                </ul>
+            </div>
+            <div class="menu ">
+                <ul>
+                    <li id="p1"><a href="#">About Us</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li >
+                        <input list="search" type="search" value="" placeholder="Search" class="p-2" >
+                        <img src="assets/imgs/footer/search-interface-symbol 1.png" alt="">
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    </div>
-<!-- create-pass end -->
-<!-- verification -->
-<div class="verification">
-    <div class="container">
-        <div class="row ">
-            <div class="box col-lg-6 col-md-12 pt-5">
-                <div class="img">
-                    <img src="assets/imgs/verification/Frame 872.png" class="img-fluid" alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 text-center">
-                <div class="text-center">
-                    <p class="logo-text ">Wa<span class="M">M</span>ee<span class="d">d</span></p>
-                </div>
-                <div class="pass">
-                    <p class="p-1">Verification</p>
-                    <P class="p-2 ">Please enter the code sent on your
-                        email address!</p>
-                </div>
-                <div class="d-flex num justify-content-center">
-                    <div class="box ">
-                        <p>
-                            5
-                        </p>
-                    </div>
-                    <div class="box">
-                        <p>
-                            3
-                        </p>
-                    </div>
-                    <div class="box">
-                        <p>
-                            4
-                        </p>
-                    </div>
-                    <div class="box">
-                        <p>
-                            2
-                        </p>
-                    </div>
-                </div>
-                <div class="pass">
-                    <p class="p-3">Clear all</p>
-                    <P class=" ">Please enter full code</p>
-                </div>
-                  <button type="submit" class="btn text-white mt-4">
-                    Verify
-                </button>
-            </div>
+        <div class="d-flex justify-content-center">
+            <p class="pt-5">Terms & Conditions</p>
+            <p class="pt-5">Privacy Policy</p>
         </div>
     </div>
-    </div>
-<!-- verification end -->
+</footer>
+<!-- footer end -->
+
+
+<!-- دي في جزء الدكتور بتاع ايام في التسجيل بتاع الدكتور ذات نفسه -->
+
+
+
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
