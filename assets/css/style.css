@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif ,Tahoma, Arial;
 }
 li , a {
   list-style: none;
@@ -224,6 +224,9 @@ li , a {
   justify-content: center;
   padding: 40px;
   margin: 10px 0 0 10px;
+}
+.services .boxs a{
+  text-decoration: none;
 }
 .services .box-1 {
   margin-right: 80px;
@@ -995,3 +998,93 @@ border-radius: 4px;
   width: 60px;
   padding: 5px;
 }
+/* questionnaire */
+
+header {
+  margin: auto;
+  color: #000;
+  font-weight: bold;
+}
+.quiz-app {
+  margin: -70px auto;
+  width: 800px;
+  padding: 15px;
+}
+.quiz-app .quiz-info {
+  display: flex;
+  margin-top: 100px;
+  background: #fff;
+  padding: 20px;
+}
+.quiz-app .quiz-info .category {
+  flex: 1;
+}
+
+.quiz-app .quiz-area {
+  background: #bfdfdf;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 7px;
+}
+
+.quiz-app .answers-area {
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.quiz-app .answers-area .answer {
+  padding: 7px 10px 0 10px  ;
+  border-radius: 7px;
+  border: 2px solid #23caca;
+  margin: 30px 0;
+}
+.quiz-app .answers-area .answer:hover {
+  background: #a6dada;
+}
+
+.quiz-app .answers-area .answer input[type="Radio"]:checked + label {
+  color: #23caca;
+}
+.quiz-app .answers-area .answer label {
+  cursor: pointer;
+  font-weight: bold;
+  color: #777;
+  font-size: 14px;
+  margin-left: 5px;
+  position: relative;
+  top: -1px;
+}
+.quiz-app .submit-button {
+  background-color: #23caca;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 20px auto;
+}
+.quiz-app .submit-button:focus {
+  outline: none;
+}
+.quiz-app .results span {
+  font-weight: bold;
+}
+.quiz-app .results span.bad {
+  color: #dc0a0a;
+  text-align: center;
+  padding-left: 210px;
+}
+.quiz-app .results span.good {
+  color: #009688;
+  padding-left: 210px;
+}
+.quiz-app .results span.perfect {
+  color: #0075ff;
+  padding-left: 210px;
+}
+
+/* questionnaire end */
