@@ -25,6 +25,10 @@ li , a {
   text-decoration: none;
   color: var(--section-color);
 }
+input:focus {
+  outline: none;
+ }
+
 /* global section */
 .logo-text {
   color: #000;
@@ -251,6 +255,9 @@ li , a {
 .services .box:hover img {
   filter: var(--secondary-filter);
 }
+.services .box-active:hover img{
+  filter: var(--primary-filter);
+}
 /* services end */
 /* section */
 .section {
@@ -270,10 +277,10 @@ li , a {
   transition: 0.5s;
   cursor: pointer;
 }
-.section .box .section-content {
+.section .box .section-content , .doctor-patient-chat .box .section-content {
   margin-left: 20px;
 }
-.section .section-content .p1 {
+.section .section-content .p1 , .doctor-patient-chat .box .section-content .p1 {
   color: #000;
   font-family: Inter;
   font-size: 25px;
@@ -378,7 +385,8 @@ footer .menu ul li input {
 /* register end */
 /* login */
 .login {
-  padding: 100px 0 50px 0;
+  padding: 50px 0 ;
+  max-height: 100vh ;
 }
 .login .input-group {
   justify-content: center;
@@ -391,6 +399,15 @@ footer .menu ul li input {
   border-radius: 4px;
   padding: 5px;
 }
+ .input-group input:focus {
+  outline: none; /* إزالة الحدود عند التركيز */
+  background-color: rgb(179, 237, 179); /* تغيير الخلفية عند التركيز */
+}
+
+/* عند النقر */
+ .input-group input:active {
+  background-color: var(--primary-color); /* تغيير الخلفية عند النقر */
+}
 .login .btn {
   width: 400px;
   height: 40px;
@@ -399,7 +416,6 @@ footer .menu ul li input {
 .login a {
   color: #000;
   text-decoration: none;
-  padding-left: 270px;
 }
 .login .log {
   font-family: poppins;
@@ -411,20 +427,15 @@ footer .menu ul li input {
   height: 25px;
   margin-top: 4px;
 }
-.login .imgs .facebook {
+.login .imgs .facebook , .login .imgs .google{
   border: 1px solid #00000015;
   border-radius: 3px;
   width: 130px;
-  height: 35px;
+  /* height: 35px; */
   cursor: pointer;
+  padding: 8px;
 }
-/* .login hr{
-    display: inline;
-        width: 100px;
-        padding-left: 100px;
-        margin-top: 20px;
-        background-color: #000000a9;
-} */
+
 /* login end */
 /* sign up */
 .sign-up {
@@ -972,32 +983,6 @@ border-radius: 4px;
   color: #00000062;
 }
 /* sechdule end */
-/* ssssssssssss */
-.chat-container {
-  width: 300px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
-
-#chat-box {
-  height: 200px;
-  overflow-y: scroll;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-#message {
-  width: calc(100% - 70px);
-  padding: 5px;
-  margin-right: 10px;
-}
-
-#send-btn {
-  width: 60px;
-  padding: 5px;
-}
 /* questionnaire */
 
 header {
@@ -1088,3 +1073,331 @@ header {
 }
 
 /* questionnaire end */
+
+/* slider */
+.slider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+  margin-top:20px ;
+}
+.slider .item{
+  position: absolute;
+  width: 550px;
+  height: 300px;
+  text-align: justify;
+  background-color: #a1d9d92f;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  left: calc(50% - 280px);
+  top: 0;
+}
+.slider .item h4{
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  padding: 7px;
+  width: 150px;
+  margin-left: 330px;
+  color: var(--primary-color);
+}
+.slider .item p {
+  color: #39A7A7;
+  padding: 20px;
+}
+.slider .item span{
+  display: block;
+  padding-top: 20px;
+  text-align: center;
+}
+.slider #prev ,.slider #next{
+  position: absolute;
+  top: 40%;
+  color: var(--primary-color);
+  background-color: transparent;
+  border: none;
+  font-size: 60px;
+  font-family: monospace;
+  font-weight: bold;
+  left: 50px;
+  cursor: pointer;
+}
+
+.slider #next{
+  left: unset;
+  right: 50px;
+}
+.slider-btn a{
+  text-decoration: none;
+}
+.slider-btn a .btn{
+  color: white;
+  width: 200px;
+  margin: auto;
+  display: block;
+}
+/* slider end */
+/* opponiment-done */
+.apponiment-done  {
+  background-image: url(../imgs/apponiment-done/apponiment\ done.png) no-repeat fixed cover;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; */
+
+}
+
+.apponiment-done .box {
+  width: 225px;
+  height: 255px;
+  background: white;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.apponiment-done .box img {
+  width: 50px;
+  height: 50px;
+}
+
+.apponiment-done .box .p1 {
+  color: rgb(144, 142, 142);
+  font-weight: 500;
+}
+
+.apponiment-done .box .p2 {
+  color: #4dc5c5;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: -14px;
+}
+
+.apponiment-done .box .btn {
+  color: #39A7A7;
+  font-weight: bold;
+  width: 170px;
+  background-color: white;
+  border: 1px solid var(--primary-color);
+}
+
+.apponiment-done .box .btn:hover{
+  color: white;
+  background: var(--primary-color);
+  
+}
+/* opponiment-done end*/
+/* contact-us  */
+
+
+.contact-form input ,.contact-form textarea 
+{
+  background-color: #ece9e9;
+  border: none;
+  width: 390px;
+  height: 55px;
+  border-radius: 8px;
+  color: rgb(134, 133, 133);
+  padding: 10px;
+  font-weight: 650;
+  cursor: pointer;
+  font-size: 0.8em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.contact-form .text {
+  color: rgb(140, 138, 138);
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 15px;
+
+}
+
+.contact-form .send {
+  background-color: #39a7a7;
+  border: none;
+  width: 230px;
+  height: 50px;
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+  font-weight: 650;
+  cursor: pointer;
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+
+.contact-form h2 {
+  color: rgb(92, 92, 92);
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.contact-form h6 {
+  color: rgb(140, 138, 138);
+  font-weight: 600;
+  font-size: large;
+}
+
+.contact-us .column-contact-info .contact-details ul li a {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: #0000006b;
+  font-weight: bold ;
+  padding-top: 9px;
+}
+.contact-us .column-contact-info .contact-details ul li a  p{
+padding-top: 9px;
+}
+
+/* contact-us end */
+/* vodafone-cash-8 */
+
+ .file-input {
+  position: relative;
+  width: 200px;
+  margin-top: 8px;
+}
+
+.vodafone-cash-8 .input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.vodafone-cash-8 .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.vodafone-cash-8 .phone-number {
+ margin-top: 20px;
+}
+.vodafone-cash-8 .phone-number{
+  width: 200px;
+}
+
+
+
+/* vodafone-cash-8 end */
+
+/* Doctor-Patient Chat */
+.doctor-patient-chat .box{
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.doctor-patient-chat .box .section-content{
+padding: 30px 20px;
+}
+.doctor-patient-chat .chat-container {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 11px;
+  justify-content: end;
+  align-content: end;
+  border: 2px solid  #ccc;
+}
+
+.chat-box {
+  max-width: 80%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  clear: both;
+}
+
+.patient {
+  background-color: #39a7a7;
+  color: white;
+  float: left;
+  margin-right: 20%; /* Add spacing between patient and doctor */
+}
+
+.doctor {
+  background-color: #f2f2f2;
+  color: #333333;
+  float: right;
+  margin-left: 20%; /* Add spacing between doctor and patient */
+}
+
+.message {  
+  padding: 8px;
+}
+.message img {
+  max-width: 50px; /* Adjust image size as needed */
+  border-radius: 50%; /* Make image circular */
+}
+.input-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.input-container button {
+  padding: 10px 20px;
+  background-color: #39a7a7;
+    color: white;
+}
+/* Doctor-Patient Chat end */
+
+/* library */
+
+
+.library .heading h4 {
+  font-weight: bold;
+  margin-left: 40px;
+  margin-top: 35px;
+}
+
+.library .heading p ,.library .book p{
+  margin-left: 40px;
+  font-size: 28px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(168, 168, 168);
+}
+.library .book {
+  padding-left: 30px;
+}
+.library .book p{
+  color: rgb(105, 105, 105);
+
+}
+.library .book img{
+  width: 200px;
+}
+.library .book h4 {
+  padding-top: 9px;
+  color: rgb(105, 105, 105);
+}
+
+.library .book h6{
+  color: rgb(168, 168, 168);
+
+}
+/* library end */

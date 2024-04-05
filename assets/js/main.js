@@ -1,8 +1,3 @@
-// window.addEventListener("scroll", function () {
-//     var navbar = document.querySelector(".navbar");
-//     navbar.classList.toggle("sticky", window.scrollY > 0);
-//   });
-
 // login
 const form = document.querySelector("#form");
 const email = document.querySelector("#email");
@@ -67,46 +62,11 @@ const validateEmail = (email) => {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
 };
-// sssssssssssss
-document.addEventListener("DOMContentLoaded", function () {
-  const chatBox = document.getElementById("chat-box");
-  const messageInput = document.getElementById("message");
-  const sendButton = document.getElementById("send-btn");
 
-  sendButton.addEventListener("click", function () {
-    sendMessage();
-  });
 
-  messageInput.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      sendMessage();
-    }
-  });
 
-  function sendMessage() {
-    const messageText = messageInput.value.trim();
-    if (messageText !== "") {
-      appendMessage("You: " + messageText);
-      // You can replace this with logic to send message to the other person
-      receiveMessage("Friend: Hello! How are you?");
-      messageInput.value = "";
-    }
-  }
-
-  function appendMessage(message) {
-    const messageElement = document.createElement("div");
-    messageElement.innerText = message;
-    chatBox.appendChild(messageElement);
-    chatBox.scrollTop = chatBox.scrollHeight;
-  }
-
-  function receiveMessage(message) {
-    setTimeout(function () {
-      appendMessage(message);
-    }, 500);
-  }
-});
 // qustionnaire
+
 let countSpan = document.querySelector(".count span");
 let bullets = document.querySelector(".bullets");
 let bulletsSapnContainer = document.querySelector(".bullets .spans");
@@ -139,28 +99,26 @@ function getQuestions() {
 
         //increase index
         currentIndex++;
+//check the answer
+checkAnswer(theRightAnswer, qCount);
 
-        //check the answer
-        checkAnswer(theRightAnswer, qCount);
+//empty previous question
+quizArea.innerHTML = "";
+answersArea.innerHTML = "";
 
-        //empty previous question
-        quizArea.innerHTML = "";
-        answersArea.innerHTML = "";
+//Add questios Data
+addQuestionData(questionsObject[currentIndex], qCount);
 
-        //Add questios Data
-        addQuestionData(questionsObject[currentIndex], qCount);
+//handle bullets classes
+handleBullets();
 
-        //handle bullets classes
-        handleBullets();
-
-        //show results
-        showResults(qCount);
-      };
-    }
-  };
-  // url ==> ده هتاخده كوبي من اللينك اللي حاطط في الاسئله علشان متتلخبطش
-  myRequest.open("GET", "Html_Question.json", true);
-  myRequest.send();
+//show results
+showResults(qCount);
+};
+}
+};
+myRequest.open("GET", "Html_Question.json", true);
+myRequest.send();
 }
 getQuestions();
 
@@ -267,13 +225,13 @@ function showResults(count) {
     bullets.remove();
 
     if (rightAnswers > (count / 2 && rightAnswers < count)) {
-      theResults = `<span class="good">The deppression is high</span> , ${rightAnswers} from ${count} `;
+      theResults = `<span class="bad">The deppression is high</span> , ${rightAnswers} from ${count} `;
     } else if (rightAnswers === count) {
-      theResults = `<span class="Prefect">The deppression is meduim</span>  `;
+      theResults = `<span class="meduim">The deppression is meduim</span>  `;
     } else if (rightAnswers != count) {
       theResults = `<span class="bad">You must answer the question</span> , ${rightAnswers} from ${count} `;
     } else {
-      theResults = `<span class="bad">You Are Good</span> , ${rightAnswers} from ${count} `;
+      theResults = `<span class="Prefect">You Are Good</span> , ${rightAnswers} from ${count} `;
     }
 
     resultsContainer.innerHTML = theResults;
@@ -284,3 +242,73 @@ function showResults(count) {
 }
 
 // qustionnaire end
+
+// slider
+
+let slideIndex = 0;
+showSlide(slideIndex);
+
+function nextSlide() {
+  showSlide(slideIndex += 1);
+}
+
+function prevSlide() {
+  showSlide(slideIndex -= 1);
+}
+
+function showSlide(n) {
+  const slides = document.querySelectorAll('.slider .item');
+  if (n >= slides.length) {
+    slideIndex = 0;
+  }
+  if (n < 0) {
+    slideIndex = slides.length - 1;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slides[slideIndex].style.display = 'block';
+}
+// slider end
+
+// Doctor -Patient-Chat
+
+function sendMessage() {
+  var messageInput = document.getElementById("message-input");
+  var message = messageInput.value.trim();
+
+  if (message !== "") {
+      addMessage("patient", message);
+      // You can add logic here to simulate the doctor's response
+      // For simplicity, let's simulate a delayed response
+      setTimeout(function() {
+        addMessage("doctor", "Thank you for your message. I will get back to you shortly.");
+    }, 1000);
+  }
+
+  // Clear the input field after sending message
+  messageInput.value = "";
+}
+
+function addMessage(sender, message) {
+  var chatContainer = document.getElementById("chat-container");
+  var chatBox = document.createElement("div");
+  chatBox.classList.add("chat-box");
+  chatBox.classList.add(sender);
+
+  var messageSpan = document.createElement("span");
+  messageSpan.classList.add("message");
+  messageSpan.textContent = message;
+
+  chatBox.appendChild(messageSpan);
+  chatContainer.appendChild(chatBox);
+
+  // Scroll to the bottom of the chat container
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+function generateDoctorResponse(patientMessage) {
+    // Here you can implement your logic for generating doctor's response
+    // For simplicity, let's just echo the patient's message
+    return "Thank you for your message: " + patientMessage;
+}
+// Doctor -Patient-Chat end

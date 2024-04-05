@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionnaire</title>
+    <title>Doctor-Patient Chat</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,24 +14,32 @@
 
 </head>
 <body>
-    <div class="d-flex ps-5">
-        <div class="navbar-brand pt-4" href="#">
-            <img src="assets/imgs/nav-bar/Group 771.png" alt="">
+    <div class="doctor-patient-chat">
+
+    <div class="box ">
+        <div class="d-flex">
+            <div class="img">
+                <img src="assets/imgs/doctor-patient-chat/Subtract.png" class="img-fluid" alt="">
+            </div>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="section-content ">
+                    <p class="p1  ">Dr.Amilia john</p>
+                </div>
+            </a>
         </div>
-        <p class="logo-text ">Wa<span class="M">M</span>ee<span class="d">d</span></p>
     </div>
-        <div class="quiz-app">
-            <div class="quiz-info">
-              <header>Mental Health Care</header>
-            </div>
-            <div class="quiz-area"></div>
-            <div class="answers-area"></div>
-            <button class="submit-button" >submit Answer</button>
-            <div class="bullets">
-              <div class="spans"></div>
-            </div>
-            <div class="results"></div>
-          </div>
+    <!-- doctor chat -->
+    <div class="chat-container" id="chat-container">
+        <!-- Messages will be dynamically added here -->
+    </div>
+    <div class="input-container d-flex">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button class="btn" onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- doctor chat end -->
+</div>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
